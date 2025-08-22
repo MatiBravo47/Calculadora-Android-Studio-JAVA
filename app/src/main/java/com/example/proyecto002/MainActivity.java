@@ -27,24 +27,31 @@ public class MainActivity extends AppCompatActivity {
         String valor1 = et1.getText().toString();
         String valor2 = et2.getText().toString();
 
+        if (valor1.isEmpty() || valor2.isEmpty()){
+            tv1.setText("Los campos no pueden estar vacios");
+            return;
+        }
         int nro1 = Integer.parseInt(valor1);
         int nro2 = Integer.parseInt(valor2);
         int suma = nro1 + nro2;
 
-        String resu = String.valueOf(suma);
-        tv1.setText(resu);
+        tv1.setText(String.valueOf(suma));
     }
 
     public void restar(View view){
         String valor1 = et1.getText().toString();
         String valor2 = et2.getText().toString();
 
+        if (valor1.isEmpty() || valor2.isEmpty()){
+            tv1.setText("Los campos no pueden estar vacios");
+            return;
+        }
+
         int nro1 = Integer.parseInt(valor1);
         int nro2 = Integer.parseInt(valor2);
         int resta = nro1 - nro2;
 
-        String resu = String.valueOf(resta);
-        tv1.setText(resu);
+        tv1.setText(String.valueOf(resta));
     }
 }
 
