@@ -3,8 +3,7 @@ package com.example.proyecto002;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;   // Necesario para usar View
-import android.widget.Button;
+import android.view.View;   //Necesario para manejar eventos de clic
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -19,11 +18,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Conecta las variables con los elementos del layout usando sus IDs
         et1 = findViewById(R.id.et1);
         et2 = findViewById(R.id.et2);
         tv1 = findViewById(R.id.tv1);
     }
     public void sumar(View view){
+        //getText() trae un objeto editable.Se debe convertir a String primero para despues convertirlo a Integer.
         String valor1 = et1.getText().toString();
         String valor2 = et2.getText().toString();
 
